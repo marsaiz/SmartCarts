@@ -32,6 +32,6 @@ public class Productos
 
     public override string ToString()
     {
-        return string.Format("{0}-{1}-{2}-{3}-{4}-{5}-{6}", IdProducto, Ean, TipoProducto, Descripcion, Precio, Iva);
+        return string.Format("Id Producto-{0}-Tipo Producto-{1}-Descripción-{2}-Precio Producto-${3}", IdProducto, TipoProducto, Descripcion, Precio);
     }
 }

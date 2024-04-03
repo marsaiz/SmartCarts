@@ -194,3 +194,4 @@
 /home/marcelo/Programación/c#/SmartCarts/SmartCarts.Libreria/obj/Debug/net8.0/SmartCarts.Libreria.pdb
 /home/marcelo/Programación/c#/SmartCarts/SmartCarts.Libreria/obj/Debug/net8.0/SmartCarts.Libreria.genruntimeconfig.cache
 /home/marcelo/Programación/c#/SmartCarts/SmartCarts.Libreria/obj/Debug/net8.0/ref/SmartCarts.Libreria.dll
+/home/marcelo/Programación/c#/SmartCarts/SmartCars.Libreria/obj/Debug/net8.0/SmartCarts.Libreria.sourcelink.json

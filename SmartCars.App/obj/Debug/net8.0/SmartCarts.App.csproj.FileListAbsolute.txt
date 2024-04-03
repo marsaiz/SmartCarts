@@ -41,3 +41,4 @@
 /home/marcelo/Programación/c#/SmartCarts/SmartCarts.App/obj/Debug/net8.0/SmartCarts.App.dll
 /home/marcelo/Programación/c#/SmartCarts/SmartCarts.App/obj/Debug/net8.0/refint/SmartCarts.App.dll
 /home/marcelo/Programación/c#/SmartCarts/SmartCarts.App/obj/Debug/net8.0/SmartCarts.App.pdb
+/home/marcelo/Programación/c#/SmartCarts/SmartCars.App/obj/Debug/net8.0/SmartCarts.App.sourcelink.json

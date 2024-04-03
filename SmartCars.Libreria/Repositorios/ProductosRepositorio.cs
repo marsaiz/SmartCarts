@@ -32,9 +32,9 @@ public class ProductosRepositorio
 
     internal List<Productos> ListarProductosPorNombre(string nombre)
     {
-        return _smartCartsConexto.Productos.Where(d => d.Descripcion.ToLower().Contains(nombre.ToLower())).ToList();
+        return _smartCartsConexto.Productos.Where( d => d.Descripcion.ToLower().Contains(nombre.ToLower())).ToList();
     }
-
+        
     internal void CargarArchivo(Productos productos)
     {
         productos.Id_producto = Guid.NewGuid();
@@ -48,10 +48,9 @@ public class ProductosRepositorio
         if (producto != null)
         {
             producto.Precio = nuevoPrecio;
-
             _smartCartsConexto.SaveChanges();
         }
-        else 
+        else
         {
             Console.WriteLine("El producto no fue encontrado");
         }

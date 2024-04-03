@@ -1,3 +1,4 @@
+using Programa.App.Pantallas;
 using SmartCarts.Libreria.Modelos;
 using SmartCarts.Libreria.Negocio;
 using SmartCarts.Libreria.Repositorios;
@@ -15,22 +16,45 @@ public class PantallaModificarProducto
 
     public void MostrarPantallaAccion()
     {
-        PantallaConsultaProductos pantallaConsultaProductos = new PantallaConsultaProductos();
-        pantallaConsultaProductos.ListarProductos();
+        bool validEntry = false;
 
-        Console.Write("Ingrese el id del producto: ");
-        int productoSeleccionado = Int32.Parse(Console.ReadLine());
+        do
+        {
+            Console.WriteLine("Ingrese el nombre o parte de el para hacer una busqueda:");
+            string entradaUsuario = Console.ReadLine();
 
-        ProductoServicio productoServicio = new ProductoServicio();
-        productoServicio.ObtenerProductoPorId(productoSeleccionado);
+            List<Productos> listado = _productoServicio.ObtenerProductosPorNombre(entradaUsuario);
 
-        double nuevoPrecio = 0;
-        Console.WriteLine("Escriba el nuevo precio");
-        nuevoPrecio = Convert.ToDouble(Console.ReadLine());
+            foreach (Productos item in listado)
+            {
+                Console.WriteLine("Producto/s encontrados: ");
+                Console.WriteLine(item);
+            }
+            Console.WriteLine("Para continuar precione s/n");
+            string respuesta = Console.ReadLine().ToLower();
 
-        _productoServicio.ModificarPrecioProducto(productoSeleccionado, nuevoPrecio);
-        
-        Console.WriteLine("Precio modificado");
-        Console.WriteLine();
+            if (respuesta == "s")
+            {
+                Console.Write("Ingrese el id del producto: ");
+                int productoSeleccionado = Int32.Parse(Console.ReadLine());
+
+                ProductoServicio productoServicio = new ProductoServicio();
+                productoServicio.ObtenerProductoPorId(productoSeleccionado);
+
+                double nuevoPrecio = 0;
+                Console.WriteLine("Escriba el nuevo precio");
+                nuevoPrecio = Convert.ToDouble(Console.ReadLine());
+
+                _productoServicio.ModificarPrecioProducto(productoSeleccionado, nuevoPrecio);
+
+                Console.WriteLine("Precio modificado");
+                Console.WriteLine();
+            }
+            else
+            {
+                PantallaPrincipal pantallaPrincipal1 = new PantallaPrincipal();
+                pantallaPrincipal1.MostrarPantallaPrincipal();
+            }
+        } while (validEntry == false);
     }
 }
