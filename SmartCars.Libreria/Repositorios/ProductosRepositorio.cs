@@ -32,13 +32,28 @@ public class ProductosRepositorio
 
     internal List<Productos> ListarProductosPorNombre(string nombre)
     {
-        return _smartCartsConexto.Productos.Where( d => d.Descripcion.ToLower().Contains(nombre.ToLower())).ToList();
+        return _smartCartsConexto.Productos.Where(d => d.Descripcion.ToLower().Contains(nombre.ToLower())).ToList();
     }
-        
+
     internal void CargarArchivo(Productos productos)
     {
-        productos.Id_producto = Guid.NewGuid();
-        _smartCartsConexto.Productos.Add(productos);
+        //productos.Id_producto = Guid.NewGuid();
+        Productos controlProducto = _smartCartsConexto.Productos.Find(productos.IdProducto);
+
+        if (controlProducto != null)
+        {
+            controlProducto.Ean = productos.Ean;
+            controlProducto.TipoProducto = productos.TipoProducto;
+            controlProducto.Descripcion = productos.Descripcion;
+            controlProducto.Precio = productos.Precio;
+            controlProducto.Iva = productos.Iva;
+        }
+        else
+        {
+            _smartCartsConexto.Productos.Add(productos);
+
+        }
+
         _smartCartsConexto.SaveChanges();
     }
     internal void ModificarPrecio(int idProducto, double nuevoPrecio)

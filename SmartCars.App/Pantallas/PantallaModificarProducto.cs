@@ -1,3 +1,4 @@
+using System.Reflection;
 using Programa.App.Pantallas;
 using SmartCarts.Libreria.Modelos;
 using SmartCarts.Libreria.Negocio;
@@ -37,6 +38,7 @@ public class PantallaModificarProducto
             {
                 Console.Write("Ingrese el id del producto: ");
                 int productoSeleccionado = Int32.Parse(Console.ReadLine());
+
 
                 ProductoServicio productoServicio = new ProductoServicio();
                 productoServicio.ObtenerProductoPorId(productoSeleccionado);

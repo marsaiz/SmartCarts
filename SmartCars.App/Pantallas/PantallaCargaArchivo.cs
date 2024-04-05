@@ -1,5 +1,6 @@
 using SmartCarts.Libreria.Modelos;
 using SmartCarts.Libreria.Negocio;
+using System.Diagnostics.Metrics;
 using System.Globalization;
 
 namespace SmartCarts.App.Pantallas
@@ -49,7 +50,15 @@ namespace SmartCarts.App.Pantallas
                         iva = double.Parse(fila[5], CultureInfo.InvariantCulture);
                         Console.WriteLine("{0}-{1}-{2}-{3}-{4}-{5}", id, ean, tipoProducto, descripcion, precio, iva);
 
-                        Console.WriteLine();
+                        /* object[,] arrayMultidimensional = new object[0, 5];
+
+                        arrayMultidimensional[0, 0] = id;
+                        arrayMultidimensional[0, 1] = ean;
+                        arrayMultidimensional[0, 2] = tipoProducto;
+                        arrayMultidimensional[0, 3] = tipoProducto;
+                        arrayMultidimensional[0, 4] = descripcion;
+                        arrayMultidimensional[0, 5] = precio;
+                        arrayMultidimensional[0, 6] = iva; */
 
                         string? readResult;
                         Console.WriteLine("¿Desea guardar el archivo en sistema: s/n?");
@@ -59,7 +68,7 @@ namespace SmartCarts.App.Pantallas
                         {
                             readResult = readResult.ToLower();
                         }
-                        
+
                         if (readResult == "s")
                         {
                             Productos productos = new Productos();
@@ -75,11 +84,10 @@ namespace SmartCarts.App.Pantallas
 
                             Console.WriteLine("Archivo cargado con exito");
                             Console.WriteLine();
-                            //Console.ReadKey();
                         }
                     }
-                }
 
+                }
             }
             catch (Exception e)
             {
@@ -87,6 +95,5 @@ namespace SmartCarts.App.Pantallas
                 Console.WriteLine(e.Message);
             }
         }
-
     }
 }

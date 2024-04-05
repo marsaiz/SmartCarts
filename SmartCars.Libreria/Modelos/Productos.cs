@@ -5,13 +5,13 @@ using System.Dynamic;
 
 namespace SmartCarts.Libreria.Modelos;
 
-[Table("productos")]
+[Table("producto")]
 public class Productos
 {
-    [Key]
+    /* [Key]
     [Column("id_producto")]
-    public Guid Id_producto { get; set; }
-    
+    public Guid Id_producto { get; set; } */
+    [Key]
     [Column("id")]
     public int IdProducto { get; set; }
 
