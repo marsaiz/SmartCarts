@@ -18,11 +18,11 @@ public class Productos
     [Column("ean")]
     public long Ean {get ; set; }
 
-    [Column("tipoproducto")]
-    public string? TipoProducto {get ; set; }
-
     [Column("descripcion")]
     public string? Descripcion {get ; set; }
+
+    [Column("tipoproducto")]
+    public string? TipoProducto {get ; set; }
 
     [Column("precio")]
     public double Precio {get ; set; }
@@ -32,6 +32,6 @@ public class Productos
 
     public override string ToString()
     {
-        return string.Format("Id Producto-{0}-Tipo Producto-{1}-Descripción-{2}-Precio Producto-${3}", IdProducto, TipoProducto, Descripcion, Precio);
+        return string.Format("Id Producto-{0}-Descripción-{1}-Tipo Producto-{2}-Precio Producto-${3}", IdProducto, Descripcion, TipoProducto, Precio);
     }
 }

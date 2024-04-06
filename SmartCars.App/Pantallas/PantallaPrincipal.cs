@@ -4,12 +4,10 @@ namespace Programa.App.Pantallas
 {
     public class PantallaPrincipal
     {
-
         public PantallaPrincipal()
         {
 
         }
-
         public void MostrarPantallaPrincipal()
         {
             string? readResult;
@@ -17,12 +15,10 @@ namespace Programa.App.Pantallas
             do
             {
                 //Menú de opciones
-
                 Console.Clear();
-
                 Console.WriteLine("1. Cargar archivo y visualizar datos cargados");
                 Console.WriteLine("2. Modificar precio del producto");
-                Console.WriteLine("3. Visualizar productos cargados en el sistema");
+                Console.WriteLine("3. Busqueda y visualización de productos cargados en el sistema");
                 Console.WriteLine();
                 Console.WriteLine("Digite una selección (o digite exit para salir)");
 
@@ -31,7 +27,7 @@ namespace Programa.App.Pantallas
                 {
                     menuSeleccion = readResult.ToLower();
                 }
-
+                
                 switch (menuSeleccion)
                 {
                     case "1":
@@ -48,8 +44,6 @@ namespace Programa.App.Pantallas
                         break;
                 }
             } while (menuSeleccion != "exit");
-
         }
-
     }
 }

@@ -39,10 +39,10 @@ public class PantallaModificarProducto
                 Console.Write("Ingrese el id del producto: ");
                 int productoSeleccionado = Int32.Parse(Console.ReadLine());
 
-
                 ProductoServicio productoServicio = new ProductoServicio();
                 productoServicio.ObtenerProductoPorId(productoSeleccionado);
 
+                //declaración de variable temporal para almacenar el nuevo precio del producto.
                 double nuevoPrecio = 0;
                 Console.WriteLine("Escriba el nuevo precio");
                 nuevoPrecio = Convert.ToDouble(Console.ReadLine());

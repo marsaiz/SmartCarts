@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SmartCarts.Libreria")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+515e511560b084a11a3fc485b53879921f70c6fb")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a8b09c9885f71e94069aea5a4b07c9731acead93")]
 [assembly: System.Reflection.AssemblyProductAttribute("SmartCarts.Libreria")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SmartCarts.Libreria")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

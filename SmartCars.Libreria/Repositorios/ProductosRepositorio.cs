@@ -43,8 +43,8 @@ public class ProductosRepositorio
         if (controlProducto != null)
         {
             controlProducto.Ean = productos.Ean;
-            controlProducto.TipoProducto = productos.TipoProducto;
             controlProducto.Descripcion = productos.Descripcion;
+            controlProducto.TipoProducto = productos.TipoProducto;
             controlProducto.Precio = productos.Precio;
             controlProducto.Iva = productos.Iva;
         }
