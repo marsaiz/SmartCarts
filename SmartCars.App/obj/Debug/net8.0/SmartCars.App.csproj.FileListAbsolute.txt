@@ -1,5 +1,0 @@
-/home/marcelo/Programación/c#/SmartCarts/SmartCars.App/obj/Debug/net8.0/SmartCars.App.csproj.AssemblyReference.cache
-/home/marcelo/Programación/c#/SmartCarts/SmartCars.App/obj/Debug/net8.0/SmartCars.App.GeneratedMSBuildEditorConfig.editorconfig
-/home/marcelo/Programación/c#/SmartCarts/SmartCars.App/obj/Debug/net8.0/SmartCars.App.AssemblyInfoInputs.cache
-/home/marcelo/Programación/c#/SmartCarts/SmartCars.App/obj/Debug/net8.0/SmartCars.App.AssemblyInfo.cs
-/home/marcelo/Programación/c#/SmartCarts/SmartCars.App/obj/Debug/net8.0/SmartCars.App.csproj.CoreCompileInputs.cache
